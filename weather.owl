@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#"
+     xml:base="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion">
+        <rdfs:comment>This ontology contains weather conditions such as &quot;Cold&quot; and &quot;Sunny&quot; and their corresponding emotions, &quot;Sad&quot; and &quot;Happy&quot;. These conditions are Individuals, and are created at runtime according to the &quot;General class axioms&quot; in Protege. Thus, reasoners such as Jena and Pellet can be used to infer current relevant weather conditions and their corresponding emotions, which can then be used to formulate simple sentences or tweets about a robot&apos;s feelings about the weather.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasCloudCoverage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasCloudCoverage">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationChance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationChance">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationType">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasTemperature">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWindSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWindSpeed">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cloudy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cloudy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cloudy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Emotion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Emotion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotCold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotCold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotWindy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotWindy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Rainy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Rainy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Rainy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather">
+        <rdfs:comment>The subclasses of Weather are currently being used solely in the General Class Axioms under the Active Ontology tab in Protege; they are defined by certain critera (i.e. &quot;hasTemperature some double[&lt; 65.0] SubClassOf Cold&quot;) and then they can be used as short hand in other axioms (i.e. &quot;Cold and Windy SubClassOf hasWeatherCondition value ColdAndWindy&quot;).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Windy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Windy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cloudy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cloudy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#ColdAndWindy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#ColdAndWindy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#HotButWindy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#HotButWindy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHotOrCold -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHotOrCold">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotRainy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotRainy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Rainy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Rainy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sad"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Snowy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Snowy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sunny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sunny">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Happy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Weather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&owl;topDataProperty">
+        <rdfs:comment>These properties are set at runtime by Jena (used by the Weather class) based on current weather conditions.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasTemperature"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxExclusive rdf:datatype="&xsd;double">65.0</xsd:maxExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasTemperature"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;double">85.0</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Snowy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationChance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="&xsd;double">0.0</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationType"/>
+                <owl:hasValue>snow</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotRainy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationChance"/>
+        <owl:hasValue rdf:datatype="&xsd;double">0.0</owl:hasValue>
+    </owl:Restriction>
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotWindy"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWindSpeed"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxExclusive rdf:datatype="&xsd;double">15.0</xsd:maxExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotCold"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasTemperature"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;double">65.0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#ColdAndWindy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Windy"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Sunny"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasCloudCoverage"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;double">0.5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHotOrCold"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotCold"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHot"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Rainy"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationChance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="&xsd;double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="&xsd;double">0.0</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasPrecipitationType"/>
+                <owl:hasValue>rain</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cold"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotWindy"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Windy"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWindSpeed"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="&xsd;double">15.0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#HotButWindy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Windy"/>
+        </owl:intersectionOf>
+    </owl:Class>
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotHot"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasTemperature"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="&xsd;double">85.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Cloudy"/>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasCloudCoverage"/>
+        <owl:someValuesFrom>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;double"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="&xsd;double">0.5</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:someValuesFrom>
+    </owl:Restriction>
+    <owl:Class>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#hasWeatherCondition"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#Hot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#NotWindy"/>
+        </owl:intersectionOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
