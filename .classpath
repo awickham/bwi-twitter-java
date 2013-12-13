@@ -7,5 +7,32 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/Twitterbot/external-libraries/twitter4j-core/twitter4j-core-3.0.5-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="external-libraries/Forecastio/forecastio-lib-java.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/jcl-over-slf4j-1.6.4.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/jena-arq-2.10.0.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/jena-core-2.10.0.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/jena-iri-0.9.5.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/jena-tdb-0.10.0.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/slf4j-log4j12-1.6.4.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/xercesImpl-2.10.0.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Jena/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/aterm-java-1.6.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-cli.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-core.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-datatypes.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-el.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-explanation.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-jena.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-modularity.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-owlapiv3.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-pellint.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-query.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-rules.jar"/>
+	<classpathentry kind="lib" path="external-libraries/Pellet/pellet-test.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
