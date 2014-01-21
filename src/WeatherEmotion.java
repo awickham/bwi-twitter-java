@@ -20,8 +20,8 @@ import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.OWL;
 
 public class WeatherEmotion {
-	private static final boolean TWEETING = false;
-	private static final String TWITTER_ACCOUNT = "bender";
+	private static final boolean TWEETING = true;
+	private static final String TWITTER_ACCOUNT = "robot_ebooks";
 	
 	static final String inputFileName  = "weather.owl";
 	static final String modelNameSpace = "http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#";
@@ -94,6 +94,7 @@ public class WeatherEmotion {
 		} else {
 			s += "It is currently " + list(relevantWeather) + " outside.";
 		}
+		System.out.println("Generated tweet: " + s);
 		return s;
 	}
 	
