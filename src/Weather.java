@@ -64,7 +64,7 @@ public class Weather {
 	 * @return A list of conditions, i.e. "Hot, Sunny, NotRainy".
 	 */
 	public List<String> listConditions() {
-		List<String> conditions = new LinkedList<>();
+		List<String> conditions = new LinkedList<String>();
 		final Property p = model.getProperty(modelNameSpace+"hasWeatherCondition");
 		for(final StmtIterator i = weather.listProperties(p); i.hasNext(); ) {
 			conditions.add(i.next().asTriple().getObject().getLocalName());

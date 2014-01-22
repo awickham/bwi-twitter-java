@@ -60,7 +60,7 @@ public class WeatherEmotion {
 		// Print out sentences based on happy and sad emotions.
 		OntClass emotionClass = model.getOntClass(modelNameSpace+"Emotion");
 		ExtendedIterator<OntClass> emotionSubClasses = emotionClass.listSubClasses();
-		ArrayList<String> emotions = new ArrayList<>();
+		ArrayList<String> emotions = new ArrayList<String>();
 		while(emotionSubClasses.hasNext()) {
 			String emotion = emotionSubClasses.next().getLocalName().toLowerCase();
 			emotions.add(emotion);
