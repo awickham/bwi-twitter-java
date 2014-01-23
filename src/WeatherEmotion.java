@@ -21,7 +21,7 @@ import com.hp.hpl.jena.vocabulary.OWL;
 
 public class WeatherEmotion {
 	private static final boolean TWEETING = true;
-	private static final String TWITTER_ACCOUNT = "robot_ebooks";
+	private static final Tweeter.TwitterAccount TWITTER_ACCOUNT = Tweeter.TwitterAccount.ROBOT_EBOOKS;
 	
 	static final String inputFileName  = "weather.owl";
 	static final String modelNameSpace = "http://www.semanticweb.org/tony/ontologies/2013/11/weather_emotion#";
@@ -29,9 +29,12 @@ public class WeatherEmotion {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// Initialize the model and currentWeather.
 		OntModel model = ModelFactory.createOntologyModel(PelletReasonerFactory.THE_SPEC);
-		try (final FileInputStream in = new FileInputStream(inputFileName)) {
+	try {
+	    final FileInputStream in = new FileInputStream(inputFileName);
             model.read(in, null, "RDF/XML");
-        }
+        } catch (IOException ioe) {
+	    ioe.printStackTrace();
+	}
         final Individual weather = model.createIndividual(
         		modelNameSpace + "currentWeather", OWL.Thing);
         Weather currentWeather = new Weather(model, modelNameSpace, weather);
